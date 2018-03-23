@@ -18,13 +18,16 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { CompCommunicationCookbookComponent } from './comp-communication-cookbook/comp-communication-cookbook.component';
 import { HeroParentComponent } from './comp-communication-cookbook/hero-parent/hero-parent.component';
 import { HeroChildComponent } from './comp-communication-cookbook/hero-child/hero-child.component';
+import { VersionParentComponent } from './comp-communication-cookbook/version-parent/version-parent.component';
+import { VersionChildComponent } from './comp-communication-cookbook/version-child/version-child.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'heroes', component: HeroesComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'cookbook', component: CompCommunicationCookbookComponent }
+  { path: 'cookbook', component: CompCommunicationCookbookComponent },
+  { path: 'version', component: VersionParentComponent }
 ];
 
 
@@ -38,7 +41,9 @@ const routes: Routes = [
     HeroSearchComponent,
     CompCommunicationCookbookComponent,
     HeroParentComponent,
-    HeroChildComponent
+    HeroChildComponent,
+    VersionParentComponent,
+    VersionChildComponent
   ],
   imports: [
     BrowserModule,
