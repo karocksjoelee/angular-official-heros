@@ -30,6 +30,11 @@ export class HeroDetailComponent implements OnInit {
       .subscribe(hero => this.hero = hero);
   }
 
+  save(): void {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
+  }
+
   goBack(): void {
     // The location is an Angular service for interacting with the browser.
     // Note: it's better to use Router service to trigger route changes.
