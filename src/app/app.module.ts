@@ -15,12 +15,16 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { CompCommunicationCookbookComponent } from './comp-communication-cookbook/comp-communication-cookbook.component';
+import { HeroParentComponent } from './comp-communication-cookbook/hero-parent/hero-parent.component';
+import { HeroChildComponent } from './comp-communication-cookbook/hero-child/hero-child.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'heroes', component: HeroesComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'cookbook', component: CompCommunicationCookbookComponent }
 ];
 
 
@@ -31,7 +35,10 @@ const routes: Routes = [
     HeroDetailComponent,
     MessageComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    CompCommunicationCookbookComponent,
+    HeroParentComponent,
+    HeroChildComponent
   ],
   imports: [
     BrowserModule,
