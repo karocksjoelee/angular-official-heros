@@ -22,6 +22,8 @@ import { VersionParentComponent } from './comp-communication-cookbook/version-pa
 import { VersionChildComponent } from './comp-communication-cookbook/version-child/version-child.component';
 import { VoterComponent } from './comp-communication-cookbook/voter/voter.component';
 import { VoteTakerComponent } from './comp-communication-cookbook/vote-taker/vote-taker.component';
+import { CountdownParentComponent } from './comp-communication-cookbook/countdown-parent/countdown-parent.component';
+import { CountdownTimerComponent } from './comp-communication-cookbook/countdown-timer/countdown-timer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -30,7 +32,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'cookbook', component: CompCommunicationCookbookComponent },
   { path: 'version', component: VersionParentComponent },
-  { path: 'childevent', component: VoteTakerComponent }
+  { path: 'childevent', component: VoteTakerComponent },
+  { path: 'countdown', component: CountdownParentComponent }
 ];
 
 
@@ -48,7 +51,9 @@ const routes: Routes = [
     VersionParentComponent,
     VersionChildComponent,
     VoterComponent,
-    VoteTakerComponent
+    VoteTakerComponent,
+    CountdownParentComponent,
+    CountdownTimerComponent
   ],
   imports: [
     BrowserModule,
