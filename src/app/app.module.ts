@@ -20,6 +20,8 @@ import { HeroParentComponent } from './comp-communication-cookbook/hero-parent/h
 import { HeroChildComponent } from './comp-communication-cookbook/hero-child/hero-child.component';
 import { VersionParentComponent } from './comp-communication-cookbook/version-parent/version-parent.component';
 import { VersionChildComponent } from './comp-communication-cookbook/version-child/version-child.component';
+import { VoterComponent } from './comp-communication-cookbook/voter/voter.component';
+import { VoteTakerComponent } from './comp-communication-cookbook/vote-taker/vote-taker.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -27,7 +29,8 @@ const routes: Routes = [
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'cookbook', component: CompCommunicationCookbookComponent },
-  { path: 'version', component: VersionParentComponent }
+  { path: 'version', component: VersionParentComponent },
+  { path: 'childevent', component: VoteTakerComponent }
 ];
 
 
@@ -43,7 +46,9 @@ const routes: Routes = [
     HeroParentComponent,
     HeroChildComponent,
     VersionParentComponent,
-    VersionChildComponent
+    VersionChildComponent,
+    VoterComponent,
+    VoteTakerComponent
   ],
   imports: [
     BrowserModule,

@@ -27,7 +27,7 @@ export class VersionChildComponent implements OnInit, OnChanges {
           log.push(`Intial value of ${propName} set to ${to}`);
         } else {
           const from = JSON.stringify(changedProp.previousValue);
-          log.push(`${propName} changed from ${from} to ${to}`);
+          log.push(`[ ${propName} ] changed from ${from} to ${to}`);
         }
       }
     }
