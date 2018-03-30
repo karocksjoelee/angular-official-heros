@@ -29,6 +29,7 @@ import {
 } from './comp-communication-cookbook/countdown-parent-view-child/countdown-parent-view-child.component';
 import { AstronautComponent } from './comp-communication-cookbook/astronaut/astronaut.component';
 import { MissonControlComponent } from './comp-communication-cookbook/misson-control/misson-control.component';
+import { MissionService } from './mission.service';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -77,7 +78,8 @@ const routes: Routes = [
   // The providers array tells Angular to create a single, shared instance of HeroService and inject into any class that asks for it.
   providers: [
     HeroService,
-    MessageService
+    MessageService,
+    MissionService
   ],
   bootstrap: [AppComponent]
 })
