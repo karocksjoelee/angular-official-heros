@@ -24,6 +24,11 @@ import { VoterComponent } from './comp-communication-cookbook/voter/voter.compon
 import { VoteTakerComponent } from './comp-communication-cookbook/vote-taker/vote-taker.component';
 import { CountdownParentComponent } from './comp-communication-cookbook/countdown-parent/countdown-parent.component';
 import { CountdownTimerComponent } from './comp-communication-cookbook/countdown-timer/countdown-timer.component';
+import {
+  CountdownParentViewChildComponent
+} from './comp-communication-cookbook/countdown-parent-view-child/countdown-parent-view-child.component';
+import { AstronautComponent } from './comp-communication-cookbook/astronaut/astronaut.component';
+import { MissonControlComponent } from './comp-communication-cookbook/misson-control/misson-control.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -33,7 +38,9 @@ const routes: Routes = [
   { path: 'cookbook', component: CompCommunicationCookbookComponent },
   { path: 'version', component: VersionParentComponent },
   { path: 'childevent', component: VoteTakerComponent },
-  { path: 'countdown', component: CountdownParentComponent }
+  { path: 'countdown', component: CountdownParentComponent },
+  { path: 'viewchild', component: CountdownParentViewChildComponent },
+  { path: 'service', component: MissonControlComponent }
 ];
 
 
@@ -53,7 +60,10 @@ const routes: Routes = [
     VoterComponent,
     VoteTakerComponent,
     CountdownParentComponent,
-    CountdownTimerComponent
+    CountdownTimerComponent,
+    CountdownParentViewChildComponent,
+    AstronautComponent,
+    MissonControlComponent
   ],
   imports: [
     BrowserModule,
