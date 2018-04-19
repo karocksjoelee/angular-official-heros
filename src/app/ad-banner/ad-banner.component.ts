@@ -2,6 +2,7 @@ import { Component, OnInit, Input, ViewChild, ComponentFactoryResolver} from '@a
 import { AdDirective } from '../ad.directive';
 import { AdComponent } from './ad.component.interface';
 import { AdService } from './ad.service';
+import { AdItem } from './ad-item';
 
 @Component({
   selector: 'app-ad-banner',
@@ -10,7 +11,7 @@ import { AdService } from './ad.service';
 })
 export class AdBannerComponent implements OnInit {
 
-  @Input() ads;
+  ads: AdItem[];
   @ViewChild(AdDirective) adHost: AdDirective;
   currentAdIndex = -1;
   interval: any;
@@ -22,13 +23,26 @@ export class AdBannerComponent implements OnInit {
 
   ngOnInit() {
     this.ads = this.adService.getAds();
-    this.loadComponent();
-    this.getAds();
+    this.installComponent();
+    // this.loadComponent();
+    // this.getAds();
   }
 
   /* Dynamic Component Loading:
     You need a way to load a new component without a fixed reference to the component
   **/
+
+  installComponent() {
+    // Resolve Component
+    let componentResolver = this.resolver.resolveComponentFactory(this.ads[0].component);
+    // Get Where to put it ( AdHost Directive)
+    let viewHolder = this.adHost.viewContainerRef;
+    viewHolder.clear();
+    // Create Component
+    let componentRef = viewHolder.createComponent(componentResolver);
+    // Give it data
+    componentRef.instance.data = this.ads[0].data;
+  }
 
   loadComponent() {
     this.currentAdIndex = (this.currentAdIndex + 1 ) % this.ads.length;
