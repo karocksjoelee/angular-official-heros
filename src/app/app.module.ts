@@ -35,6 +35,8 @@ import { AdBannerComponent } from './ad-banner/ad-banner.component';
 import { HeroJobAdComponent } from './ad-banner/hero-job-ad/hero-job-ad.component';
 import { HeroProfileComponent } from './ad-banner/hero-profile/hero-profile.component';
 import { AdService } from './ad-banner/ad.service';
+import { MyDirectivesComponent } from './my-directives/my-directives.component';
+import { HighlightDirective } from './my-directives/highlight.directive';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -47,7 +49,8 @@ const routes: Routes = [
   { path: 'countdown', component: CountdownParentComponent },
   { path: 'viewchild', component: CountdownParentViewChildComponent },
   { path: 'service', component: MissonControlComponent },
-  { path: 'ad', component: AdBannerComponent }
+  { path: 'ad', component: AdBannerComponent },
+  { path: 'directives', component: MyDirectivesComponent }
 ];
 
 
@@ -74,7 +77,9 @@ const routes: Routes = [
     AdDirective,
     AdBannerComponent,
     HeroJobAdComponent,
-    HeroProfileComponent
+    HeroProfileComponent,
+    MyDirectivesComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

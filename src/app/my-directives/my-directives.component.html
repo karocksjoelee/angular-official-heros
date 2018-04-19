@@ -1,0 +1,11 @@
+<h3>HighLight Directive</h3>
+<p appHighlight>Hight Light Me ! Default Color: Yellow</p>
+<p appHighlight [color]="'red'">High Light Me : Given Color : Red</p>
+
+<h4>Pick a Highlight Color</h4>
+<div>
+  <input type="radio" name="colors" (click)="pickedColor = 'lightgreen'">Green
+  <input type="radio" name="colors" (click)="pickedColor = 'purple'">Purple
+  <input type="radio" name="colors" (click)="pickedColor = 'cyan'">Cyan
+</div>
+<p appHighlight [color]="pickedColor">Chosen High Light Color </p>
