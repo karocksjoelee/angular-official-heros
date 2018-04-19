@@ -30,6 +30,11 @@ import {
 import { AstronautComponent } from './comp-communication-cookbook/astronaut/astronaut.component';
 import { MissonControlComponent } from './comp-communication-cookbook/misson-control/misson-control.component';
 import { MissionService } from './mission.service';
+import { AdDirective } from './ad.directive';
+import { AdBannerComponent } from './ad-banner/ad-banner.component';
+import { HeroJobAdComponent } from './ad-banner/hero-job-ad/hero-job-ad.component';
+import { HeroProfileComponent } from './ad-banner/hero-profile/hero-profile.component';
+import { AdService } from './ad-banner/ad.service';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -41,7 +46,8 @@ const routes: Routes = [
   { path: 'childevent', component: VoteTakerComponent },
   { path: 'countdown', component: CountdownParentComponent },
   { path: 'viewchild', component: CountdownParentViewChildComponent },
-  { path: 'service', component: MissonControlComponent }
+  { path: 'service', component: MissonControlComponent },
+  { path: 'ad', component: AdBannerComponent }
 ];
 
 
@@ -64,7 +70,11 @@ const routes: Routes = [
     CountdownTimerComponent,
     CountdownParentViewChildComponent,
     AstronautComponent,
-    MissonControlComponent
+    MissonControlComponent,
+    AdDirective,
+    AdBannerComponent,
+    HeroJobAdComponent,
+    HeroProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -79,8 +89,15 @@ const routes: Routes = [
   providers: [
     HeroService,
     MessageService,
-    MissionService
+    MissionService,
+    AdService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ],
+  entryComponents: [
+    HeroJobAdComponent,
+    HeroProfileComponent
+  ]
 })
 export class AppModule { }
