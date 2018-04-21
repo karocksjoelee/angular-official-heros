@@ -9,3 +9,8 @@
   <input type="radio" name="colors" (click)="pickedColor = 'cyan'">Cyan
 </div>
 <p appHighlight [color]="pickedColor">Chosen High Light Color </p>
+
+<h3>Custom Structure Directive</h3>
+<p *appUnless="true">AppUnless Set to True</p>
+<p *appUnless="false">AppUnless Set to False</p>
+
