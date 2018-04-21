@@ -37,6 +37,7 @@ import { HeroProfileComponent } from './ad-banner/hero-profile/hero-profile.comp
 import { AdService } from './ad-banner/ad.service';
 import { MyDirectivesComponent } from './my-directives/my-directives.component';
 import { HighlightDirective } from './my-directives/highlight.directive';
+import { UnlessDirective } from './my-directives/unless.directive';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -79,7 +80,8 @@ const routes: Routes = [
     HeroJobAdComponent,
     HeroProfileComponent,
     MyDirectivesComponent,
-    HighlightDirective
+    HighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
